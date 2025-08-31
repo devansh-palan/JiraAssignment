@@ -1,6 +1,7 @@
+# tests/test_madlibs.py
 import builtins
 import importlib
-from jira import build_story
+from madlibs import build_story
 
 def test_build_story_content():
     data = {
@@ -16,8 +17,8 @@ def test_main_flow(monkeypatch, capsys):
     inputs = iter(['sleepy','kangaroo','dance','school','sparkly','pizza','sing','Rahul','table'])
     monkeypatch.setattr('builtins.input', lambda prompt='': next(inputs))
     # Reload module to ensure main available and deterministic during test runs
-    import jira
-    jira.main()
+    import madlibs
+    madlibs.main()
     captured = capsys.readouterr()
     assert "Here’s your Mad Libs story" in captured.out
     assert "One sleepy morning" in captured.out
