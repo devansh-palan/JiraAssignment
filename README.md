@@ -1,1 +1,1 @@
-I am Devansh Palan an Aspiring cf expert, quant full time employee
+I am Devansh Palan an Aspiring cf expert
